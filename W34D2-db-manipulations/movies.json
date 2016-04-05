@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "name": "The Shawshank Redemption",
+      "year": 1994,
+      "checkedout": true
+    },
+    {
+      "name": "The Godfather",
+      "year": 1972,
+      "checkedout": false
+    },
+    {
+      "name": "The Dark Knight",
+      "year": 1974,
+      "checkedout": false
+    },
+    {
+      "name": "Schindler's List",
+      "year": 2008,
+      "checkedout": false
+    },
+    {
+      "name": "12 Angry Men",
+      "year": 1993,
+      "checkedout": false
+    },
+    {
+      "name": "bob",
+      "year": 2020,
+      "checkedout": true
+    }
+  ]
+}

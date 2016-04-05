@@ -1,0 +1,29 @@
+{
+  "movies": [
+    {
+      "name": "The Shawshank Redemption",
+      "imdb_rating": 9.2,
+      "year": 1994
+    },
+    {
+      "name": "The Godfather",
+      "imdb_rating": 9.2,
+      "year": 1972
+    },
+    {
+      "name": "The Dark Knight",
+      "imdb_rating": 8.9,
+      "year": 1974
+    },
+    {
+      "name": "Schindler's List",
+      "imdb_rating": 8.9,
+      "year": 2008
+    },
+    {
+      "name": "12 Angry Men",
+      "imdb_rating": 8.9,
+      "year": 1993
+    }
+  ]
+}
