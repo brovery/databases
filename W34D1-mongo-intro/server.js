@@ -33,7 +33,7 @@ var insertDocuments = function(db, callback) {
         console.log("Inserted 3 documents into the document collection");
         callback(result);
     });
-}
+};
 
 var updateDocument = function(db, callback) {
     // Get the documents collection
@@ -46,7 +46,7 @@ var updateDocument = function(db, callback) {
             console.log("Updated the document with the field a equal to 2");
             callback(result);
         });
-}
+};
 
 var removeDocument = function(db, callback) {
     // Get the documents collection
@@ -58,7 +58,7 @@ var removeDocument = function(db, callback) {
         console.log("Removed the document with the field a equal to 3");
         callback(result);
     });
-}
+};
 
 var findDocuments = function(db, callback) {
     // Get the documents collection
@@ -71,4 +71,4 @@ var findDocuments = function(db, callback) {
         console.dir(docs);
         callback(docs);
     });
-}
+};

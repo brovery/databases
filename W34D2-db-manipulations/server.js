@@ -8,16 +8,20 @@ var assert = require('assert');
 var url = 'mongodb://localhost:27017/vhs';
 var movies;
 
-MongoClient.connect(url, function(err, db) {
-    var collection = db.collection('movies');
+var updateMovies = function() {
+    MongoClient.connect(url, function(err, db) {
+        var collection = db.collection('movies');
 
-    collection.find({}).toArray(function(err, docs) {
-        assert.equal(err, null);
-        movies = docs;
-        db.close();
+        collection.find({}).toArray(function(err, docs) {
+            assert.equal(err, null);
+            movies = docs;
+            db.close();
+        });
+
     });
+};
 
-});
+updateMovies();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -32,6 +36,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 // List all movies.
 app.get('/api/movies', function (req, res) {
+    updateMovies();
     console.log("movies searched.");
     res.send(movies);
     
@@ -39,6 +44,7 @@ app.get('/api/movies', function (req, res) {
 
 // Search and list matches on movie titles.
 app.get('/api/searchmovie', function(req, res) {
+    updateMovies();
     var returnmovies = [];
     var patt = new RegExp(req.query.name, 'gi');
 
